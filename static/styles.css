@@ -1,0 +1,94 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+.card-body
+{
+    text-align: left;
+}
+
+textarea.form-control,
+textarea.card-text
+{
+    min-width: 100%;
+    min-height: 70px;
+    border: 0px;
+    resize: none;
+    overflow: auto;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+textarea:active,
+textarea:focus
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+#indexBody
+{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#indexBody > a
+{
+    margin: 1%;
+}
+
+.card-att
+{
+    white-space: pre-wrap;
+    position: relative;
+    height: auto;
+    margin: 0.5% 0% 2% 0%;
+    padding: 0.5% 1% 0.5% 1%;
+    border: 3px solid #f7f7f7;
+    border-radius: 8px;
+}

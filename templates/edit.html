@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Edit
+{% endblock %}
+
+{% block main %}
+<h1>EDIT Page</h1>
+    <form action="{{ '/edit/%s'%entry_id }}" method="post">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">What are your goals for today?</h5>
+                <textarea class="form-control" name="goal" id="goal" placeholder="Enter your response" rows="5">{% if goal is not none %}{{goal}}{% else %}{%endif %}</textarea>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Which issues did you stumble upon?</h5>
+                <textarea class="form-control" name="issue" id="issue" placeholder="Enter your response" rows="5">{% if issue is not none %}{{issue}}{%endif %}</textarea>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">What reflections do you have?</h5>
+                <textarea class="form-control" name="reflection" id="reflection" placeholder="Enter your response" rows="5">{% if reflection is not none %}{{reflection}}{%endif %}</textarea>
+            </div>
+        </div>
+        <h5 class="card-title">How are you feeling today?</h5>
+        <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="1" value="1" name="mood" class="custom-control-input" {% if mood == 1 %}{{"checked"}}{% endif %}>
+            <label class="custom-control-label" for="1">☹️</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="2" value="2" name="mood" class="custom-control-input" {% if mood == 2 %}{{"checked"}}{% endif %}>
+            <label class="custom-control-label" for="2">🙁</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="3" value="3" name="mood" class="custom-control-input" {% if mood == 3 %}{{"checked"}}{% endif %}>
+            <label class="custom-control-label" for="3">🤝</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="4" value="4" name="mood" class="custom-control-input" {% if mood == 4 %}{{"checked"}}{% endif %}>
+            <label class="custom-control-label" for="4">🙂</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="5" value="5" name="mood" class="custom-control-input" {% if mood == 5 %}{{"checked"}}{% endif %}>
+            <label class="custom-control-label" for="5">😀</label>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-outline-primary">Save all</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Mood
+{% endblock %}
+
+{% block main %}
+    <form action="/mood" method="post">
+        <h5 class="card-title">How are you feeling today?</h5>
+        <div class="btn-group btn-group-lg btn-group-toggle" data-toggle="buttons">
+            <label class="{% if mood == 1 %}{{"btn btn-secondary active"}}{% else %} {{"btn btn-secondary"}}{% endif %}" for="1">
+                <input type="radio" name="mood" id="option1" value="1" autocomplete="off" {% if mood == 1 %}{{"checked"}}{% endif %}>☹️
+            </label>
+            <label class="{% if mood == 2 %}{{"btn btn-secondary active"}}{% else %} {{"btn btn-secondary"}}{% endif %}" for="2">
+                <input type="radio" name="mood" id="option2" value="2" autocomplete="off" {% if mood == 2 %}{{"checked"}}{% endif %}>🙁
+            </label>
+            <label class="{% if mood == 3 %}{{"btn btn-secondary active"}}{% else %} {{"btn btn-secondary"}}{% endif %}" for="3">
+                <input type="radio" name="mood" id="option3" value="3" autocomplete="off" {% if mood == 3 %}{{"checked"}}{% endif %}>🤝
+            </label>
+            <label class="{% if mood == 4 %}{{"btn btn-secondary active"}}{% else %} {{"btn btn-secondary"}}{% endif %}" for="4">
+                <input type="radio" name="mood" id="option4" value="4" autocomplete="off" {% if mood == 4 %}{{"checked"}}{% endif %}>🙂
+            </label>
+            <label class="{% if mood == 5 %}{{"btn btn-secondary active"}}{% else %} {{"btn btn-secondary"}}{% endif %}" for="5">
+                <input type="radio" name="mood" id="option5" value="5" autocomplete="off" {% if mood == 5 %}{{"checked"}}{% endif %}>😀
+            </label>
+        </div>
+        <br />
+        <br />
+        <button type="submit" class="btn btn-info btn-lg">Save mood</button>
+    </form>
+{% endblock %}

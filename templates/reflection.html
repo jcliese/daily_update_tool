@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Daily Goals
+{% endblock %}
+
+{% block main %}
+    <form action="/reflection" method="post">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">What reflections do you have?</h5>
+                <textarea class="form-control" name="reflection" id="reflection" placeholder="Enter your response" rows="5">{% if reflection is not none %}{{reflection}}{%endif %}</textarea>
+                <button type="submit" class="btn btn-lg btn-info">Save reflections</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

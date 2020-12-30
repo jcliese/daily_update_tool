@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    {% for entry in entries[::-1] if not (entry.goal is none and entry.issue is none and entry.reflection is none and entry.mood is none) %}
+    <div class="card text-center">
+        <div class="card-header">
+            <h4>
+                {{ entry.entry_date }}
+            </h4>
+        </div>
+        <div class="card-body">
+            {% if entry.goal is not none %}
+            <h5 class="card-title">What are your goals for today?</h5>
+            <div class="card-att" ><em>{{entry.goal}}</em></div>
+            {% endif %}
+            {% if entry.issue is not none %}
+            <h5 class="card-title">Which issues did you stumble upon?</h5>
+            <div class="card-att" ><em>{{entry.issue}}</em></div>
+            <!--<textarea class="card-text" readonly>{{entry.issue}}</textarea>-->
+            {% endif %}
+            {% if entry.reflection is not none %}
+            <h5 class="card-title">What reflections do you have?</h5>
+            <div class="card-att" ><em>{{entry.reflection}}</em></div>
+            {% endif %}
+            {% if entry.mood is not none %}
+            <h5 class="card-title">How are you feeling today?</h5>
+                {% if entry.mood == 1 %}
+                ☹️
+                {% elif entry.mood == 2 %}
+                🙁
+                {% elif entry.mood == 3 %}
+                🤝
+                {% elif entry.mood == 4 %}
+                🙂
+                {% elif entry.mood == 5 %}
+                😀
+                {% endif %}
+            {% endif %}
+        </div>
+        <div class="card-footer text-muted">
+            <a href="{{ '/edit/%s'%entry.entry_id }}" class="btn btn-lg btn-info">Edit this day</a>
+        </div>
+    </div>
+    <br />
+    {% endfor %}
+{% endblock %}

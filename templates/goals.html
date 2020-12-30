@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Daily Goals
+{% endblock %}
+
+{% block main %}
+    <form action="/goals" method="post">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">What are your goals for today?</h5>
+                <textarea class="form-control" name="goal" id="goal" placeholder="Enter your response" rows="5">{% if goal is not none %}{{goal}}{% else %}{%endif %}</textarea>
+                <button type="submit" class="btn btn-lg btn-info">Save goals</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

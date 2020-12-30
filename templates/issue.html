@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Daily Goals
+{% endblock %}
+
+{% block main %}
+    <form action="/issue" method="post">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Which issues did you stumble upon?</h5>
+                <textarea class="form-control" name="issue" id="issue" placeholder="Enter your response" rows="5">{% if issue is not none %}{{issue}}{%endif %}</textarea>
+                <button type="submit" class="btn btn-lg btn-info">Save issues</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}
