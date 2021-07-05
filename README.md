@@ -3,7 +3,7 @@
 
 ## About The Project
 
-[![DAILY UPDATE TOOL][product-screenshot]](./images/DUT_Home.png)
+![DAILY UPDATE TOOL](./images/DUT_Home.png "Daily Update Tool")
 
 This webtool is made so that people can plan their day. On every morning you are able to set yourself some goals which you want to achieve. To wrap up a day you can enter issues you stumbled upon and also reflect about what you achieved. Finally it is possible to enter your mood.
 Moreover there is a history tab where you can see older entries. There you can also edit entries.
