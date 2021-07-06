@@ -1,5 +1,9 @@
 # DAILY UPDATE TOOL
 
+### Demo
+
+[Demo on Youtube](https://youtu.be/G1YYswQIZr4)
+
 
 ## About The Project
 
